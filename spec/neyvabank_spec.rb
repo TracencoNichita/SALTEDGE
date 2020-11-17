@@ -30,8 +30,7 @@ describe 'Neyvabanc' do
     expect(account.transactions.count).to eq(5)
     expect(account.transactions.first.to_h).to eq({
                                                     'date' => '15.11.2020',
-                                                    'description' => 'Оплата услуг МегаФон Урал, Номер телефона:
-                                                    79111111111, 15.11.2020 11:59:59, Сумма 50.00 RUB, Банк-он-Лайн',
+                                                    'description' => 'Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 15.11.2020 11:59:59, Сумма 50.00 RUB, Банк-он-Лайн',
                                                     'amount' => -50.0,
                                                     'currency' => 'RUR',
                                                     'account_name' => '40817810200000055320'
