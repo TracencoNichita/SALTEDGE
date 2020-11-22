@@ -1,10 +1,12 @@
-require_relative "transaction"
-require "json"
-require "rubocop"
+# frozen_string_literal: true
 
+require_relative 'transaction'
+
+# class Account
 class Account
   attr_accessor :name, :currency, :balance, :nature, :transactions
-  def initialize(name=nil, currency=nil, balance=nil, nature=nil)
+
+  def initialize(name, currency, balance, nature)
     @name = name
     @currency = currency
     @balance = balance
@@ -14,7 +16,7 @@ class Account
 
   def add_transaction(date, description, amount, currency, account_name)
     transaction = Transaction.new(date, description, amount, currency, account_name)
-    hash = transaction.transaction_to_json
+    hash = transaction.to_hash
     @transactions.push(hash)
   end
 
@@ -23,12 +25,19 @@ class Account
     JSON.parse(accounts)
   end
 
-  def to_json
-    file='accounts.json'
-    hash = {"name" => name, "currency" => currency, "balance" => balance, "nature" => nature, "transactions" => transactions }
+  def to_hash
+    { 'name' => name,
+      'currency' => currency,
+      'balance' => balance,
+      'nature' => nature,
+      'transactions' => transactions }
+  end
+
+  def to_json(*_args)
+    hash = to_hash
     json = parse_json
-    json["accounts"] << hash
-    File.open(file,"w") do |f|
+    json['accounts'] << hash
+    File.open('accounts.json', 'w') do |f|
       f.write(JSON.pretty_generate(json))
     end
   end
