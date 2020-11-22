@@ -38,7 +38,6 @@ class Neyvabank
   def fetch_transactions
     # an iterator for account links
     i = 0
-    # parsing transactions for accounts
     @accounts.each do |account|
       # navigate to transactions
       @accounts_links[i].click
@@ -51,7 +50,6 @@ class Neyvabank
       sleep(3)
       html = Nokogiri::HTML.fragment(@browser.div(id: 'mainTD').html)
       parse = parse_transactions(html, account)
-      # save our account with transactions in json
       parse.to_json
       i += 1
       browser.goto('https://bank-on-line.ru//?registered=true#Contracts')
