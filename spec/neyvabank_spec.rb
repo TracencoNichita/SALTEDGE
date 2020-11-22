@@ -1,25 +1,27 @@
 # frozen_string_literal: true
 
+require 'watir'
 require 'rspec'
 require 'nokogiri'
 require 'open-uri'
 require_relative '../neyvabank'
 
 describe 'Neyvabanc' do
-  it 'show an example account' do
+  it 'check number of accounts and show an example account' do
+    accounts = []
     bank = Neyvabank.new
     html = Nokogiri::HTML(File.read('accounts.html'))
-    accounts = bank.parse_accounts(html)
-    data = accounts.instance_variables.each_with_object({}) do |var, hash|
-      hash[var.to_s.delete('@')] = accounts.instance_variable_get(var)
+    html.children[1].elements[0].elements.each do |account|
+      accounts << bank.parse_account(account)
     end
-    expect(data).to eq({
-                         'name' => '40817978300000055322',
-                         'currency' => 'EUR',
-                         'balance' => 100_000.0,
-                         'nature' => 'Счёт',
-                         'transactions' => []
-                       })
+    expect(accounts.count).to eq(3)
+    expect(accounts.last.to_hash).to eq({
+                                          'name' => '40817978300000055322',
+                                          'currency' => 'EUR',
+                                          'balance' => 100_000.0,
+                                          'nature' => 'Счёт',
+                                          'transactions' => []
+                                        })
   end
 
   it 'check number of transactions and show an example transaction' do

@@ -1,581 +1,1919 @@
-<div id="tblWrap" style="">
-<div class="row"><div class="small-12 column paddingless" id="divHeader"><div class="restriction-width large-centered paddingless medium-centered small-centered column" id="header-content" style="">
-<div xmlns:com="http://schemas.tranzaxis.com/common-types.xsd" class="marginless row"><div class="small-12 column wrap-header large-centered medium-centered"><div>
-<div class="small-2 column logo"><a id="logobank" href="https://neyvabank.ru" target="_blank"><img alt="Банк Нейва" src="/style/img/header/logo2.png"></a></div>
-<div style="padding: 8px 15px;" class="column small-2 text-center"><a onclick="ym(61235521, 'reachGoal', 'friends_banner'); return true;" href="https://bank-on-line.ru/#Actions"><img style="border-radius: 10px; height: 77px;" src="/style/img/header/privedidruga1.jpg" alt="Приведи друга"></a></div>
-<div class="div-rates column small-3" id="div-rates" style=""><div class="row">
-<div class="arrow column"><div data-action="prev-rates" class="pic arrow-left" style="display: none;"></div></div>
-<div class="wrapper-currency-rates column">
-<table class="currency-rates currency-rates-title"><tbody><tr class=""><th colspan="3" align="center">
-<span>КУРС БАНКА (F5 - обновить)</span><span data-action="refresh"></span>
-</th></tr></tbody></table>
-<table class="currency-rates currency-rates-body show" data-currency-id="2"><tbody>
-<tr>
-<th>$/₽</th>
-<th>€/₽</th>
-<th>€/$</th>
-</tr>
-<tr>
-<td>76.09</td>
-<td>90.11</td>
-<td>1.1771</td>
-</tr>
-<tr>
-<td align="center">76.55</td>
-<td align="center">90.58</td>
-<td align="center">1.1904</td>
-</tr>
-</tbody></table>
-</div>
-<div data-action="do-exchange" class="wrapper-exchange column"><span>Обмен валюты</span></div>
-<div class="arrow end column"><div data-action="next-rates" class="pic arrow-right" style="display: none;"></div></div>
-</div></div>
-<div class="column main-buttons small-3 text-right" id="divMainButtons"><div class="cp-wrapper-buttons">
-<div class="pic tab-title"><iframe src="https://setvi.neyvabank.ru/client_neyva/statusclient.php?img=3&amp;session=202011170034306279181760868754&amp;system_id=compass&amp;client_type=10" style="width:30px; height:30px; border: 0;" height="100%" width="100%" scrolling="no" frameborder="0" allowtransparency="yes" id="clientpanel"></iframe></div>
-<div title="Сообщения" class="pic tab-title messages" id="btn-bubble"><div class="unread-count">0</div></div>
-<div class="pic nodisplay tab-title calendar" id="btn-calendar"></div>
-<div title="Настройки" class="pic tab-title settings" id="btn-config"></div>
-<div title="Обновить" class="pic tab-title help" id="btn-help"></div>
-<div title="Выход" class="pic tab-title quit" id="btn-quit"><a class="hide" id="exit-lnk" href="/?exit=true">Выход</a></div>
-<div class="cp-owner-name">Demo Bank-On-Line   </div>
-</div></div>
-</div></div></div>
-<div style="display: none;" id="topmenu" class="topmenu"></div>
-</div></div></div>
-<div class="row"><div class="small-12 column paddingless" id="divLinksmenu"><div class="restriction-width large-centered medium-centered small-centered column"><div class="row"><div class="small-12 large-8 column large-centered" id="linksmenu-container"><div class="row"><div class="small-12 column"><div class="row">
-<div class="small-6 column large-centered medium-centered small-centered"><div class="lNav" id="linksmenu" style="width: 885px; margin-left: -440px;"><dl class="tabs">
-<dd class="tab-title text-center"><a class="linknav" id="lnkHome" style="height: 31px;">ГЛАВНАЯ</a></dd>
-<dd class="tab-title text-center active"><a class="linknav" id="lnkContracts" href="#" style="height: 31px;">СЧЕТА</a></dd>
-<dd class="tab-title text-center"><a class="linknav" id="lnkCards" href="#" style="height: 31px;">КАРТЫ</a></dd>
-<dd class="tab-title text-center"><a class="linknav" id="lnkDeposits" href="#" style="height: 31px;">ВКЛАДЫ</a></dd>
-<dd class="tab-title text-center"><a class="linknav" id="lnkCredits" href="#" style="height: 31px;">КРЕДИТЫ</a></dd>
-<dd class="tab-title text-center"><a class="linknav" id="lnkPayments" href="#" style="height: 31px;">ПЛАТЕЖИ</a></dd>
-<dd class="tab-title text-center"><a class="linknav" id="lnkTransfers" href="#" style="height: 31px;">ПЕРЕВОДЫ</a></dd>
-<dd class="tab-title text-center"><a class="linknav" id="lnkTemplates" href="#" style="height: 31px;">ШАБЛОНЫ</a></dd>
-</dl></div></div>
-<div class="layouts" id="layouts" style="display: none;">
-<div class="wrap-pic column"><div class="switch-layout navbar"></div></div>
-<div class="wrap-pic column"><div class="switch-layout onecol"></div></div>
-<div class="wrap-pic column"><div class="switch-layout threecol"></div></div>
-</div>
-</div></div></div></div></div></div></div></div>
-<div class="row hide"><div><ul style="text-align: left;" class="navigation" id="navigation">
-<textarea xmlns:app="http://schemas.tranzaxis.com/applications.xsd" style="display: none;" id="settings_all">&lt;settings&gt;&lt;sstp:block xmlns:sstp="http://schemas.tranzaxis.com/sstp.xsd" xmlns="http://schemas.tranzaxis.com/sstp.wsdl" xmlns:tran="http://schemas.tranzaxis.com/tran-common.xsd" name="NewsHome" onlyone="true" pos="1" show="true"&gt;&lt;/sstp:block&gt;&lt;sstp:block xmlns:sstp="http://schemas.tranzaxis.com/sstp.xsd" xmlns="http://schemas.tranzaxis.com/sstp.wsdl" xmlns:tran="http://schemas.tranzaxis.com/tran-common.xsd" name="ContractsHome" onlyone="true" pos="2" show="true"&gt;&lt;/sstp:block&gt;&lt;sstp:block xmlns:sstp="http://schemas.tranzaxis.com/sstp.xsd" xmlns="http://schemas.tranzaxis.com/sstp.wsdl" xmlns:tran="http://schemas.tranzaxis.com/tran-common.xsd" name="CardsHome" onlyone="true" pos="3" show="true"&gt;&lt;/sstp:block&gt;&lt;sstp:block xmlns:sstp="http://schemas.tranzaxis.com/sstp.xsd" xmlns="http://schemas.tranzaxis.com/sstp.wsdl" xmlns:tran="http://schemas.tranzaxis.com/tran-common.xsd" name="TransactionsHome" onlyone="true" pos="4" show="true"&gt;&lt;/sstp:block&gt;&lt;sstp:block xmlns:sstp="http://schemas.tranzaxis.com/sstp.xsd" xmlns="http://schemas.tranzaxis.com/sstp.wsdl" xmlns:tran="http://schemas.tranzaxis.com/tran-common.xsd" name="IssuingLimitsHome" onlyone="true" pos="6" show="true"&gt;&lt;/sstp:block&gt;&lt;sstp:layout xmlns:sstp="http://schemas.tranzaxis.com/sstp.xsd" xmlns="http://schemas.tranzaxis.com/sstp.wsdl" xmlns:tran="http://schemas.tranzaxis.com/tran-common.xsd" name="threecol"&gt;&lt;/sstp:layout&gt;&lt;sstp:userData xmlns:sstp="http://schemas.tranzaxis.com/sstp.xsd" xmlns="http://schemas.tranzaxis.com/sstp.wsdl" xmlns:tran="http://schemas.tranzaxis.com/tran-common.xsd"&gt;
-        &lt;sstp:Item Name="ClientEmailWasRequested"&gt;true&lt;/sstp:Item&gt;
-    &lt;/sstp:userData&gt;&lt;/settings&gt;</textarea><textarea style="display: none;" id="settings_menu">&lt;settings&gt;&lt;/settings&gt;</textarea>
-</ul></div></div>
-<div class="row"><div class="restriction-width large-centered medium-centered small-centered column"><div class="small-12 large-centered column" id="mainTD"><table class="tblMiddle" style="height: 100%;" cellspacing="0" cellpadding="0" align="left" valign="top" height="100%" width="100%"><tbody><tr style="height: 100%;"><td style="padding: 0;" align="left" valign="top">
-<div id="divMain" style="" class="cp-page row">
-<table xmlns:com="http://schemas.tranzaxis.com/common-types.xsd" data-page-item="" crid="40817978300000055322" class="tblBlock tbl-inform" cellspacing="0" border="0" data-contract-properties='{"TypeId":"889","Id":"102235","Rid":"40817978300000055322","Status":"Active","Ccy":"978"}' data-contract-extra-properties='{"hasPayrollLink":false}'><tbody>
-<tr class="trHeader"><th colspan="6" class="blockName"><div class="row">
-<div class="small-3 column caption-table contract">
-<div class="caption-text">Счёт</div>
-<div class="caption-hint">40817978300000055322</div>
-</div>
-<div class="small-2 column wrapper-moreaction right"><div class="row"><div class="small-4 column right">
-<div title="Дополнительно" data-dropdown="drop-action" data-options="align:left" class="information open" aria-expanded="true"></div>
-<ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction open drop-left f-open-dropdown" id="drop-action" style="position: absolute; left: -185px; top: 0px;" aria-hidden="false">
-<li class="pic"><div><div class="text">Баланс</div></div></li>
-<li><div class="leger-balance text-right"><div id="moreContractLedgerBalance102235" class="">
-<div>100 000.00 €</div>
-<div>
-<span title="примерно">≈</span>9 058 000.00 ₽</div>
-<div>
-<span title="примерно">≈</span>119 040.00 $</div>
-</div></div></li>
-<li data-crid="40817978300000055322" class="pic operhist cp-action" data-action="get-statement"><div class="text">Список операций</div></li>
-<li data-crid="40817978300000055322" class="pic bankdetails cp-action" data-action="show-bank-details"><div class="text">Реквизиты банка</div></li>
-<li data-crid="40817978300000055322" class="pic dotransfer cp-action" data-action="make-transfer"><div class="text">Сделать перевод</div></li>
-<li data-app-id="445" data-crid="40817978300000055322" data-action="application-withdrawal" class="pic cp-action create-application"><div class="text">Заказ денежных средств</div></li>
-<li class="pic cp-action application-order" data-action="CMI::ContractsApplicationOrder:1"><div class="text">Заказ справки об остатке</div></li>
-</ul>
-</div></div></div>
-</div></th></tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Описание счёта</td>
-<td class="tdFieldVal"><div class="row" id="contract-title">
-<div class="small-11 column" id="lnkContractTitle" ctitle="Счёт EUR">Счёт EUR</div>
-<div class="small-1 column edit" data-action="change-contract-title"></div>
-</div></td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Валюта</td>
-<td class="tdFieldVal">Евро</td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Дата создания</td>
-<td class="tdFieldVal">01.11.2019</td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Статус</td>
-<td class="tdFieldVal">Активный</td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Доступный баланс</td>
-<td class="tdFieldVal"><span>100 000.00 €</span></td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">В т.ч. собственных средств</td>
-<td class="tdFieldVal">100 000.00 €</td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">В т.ч. средств за счет овердрафта</td>
-<td class="tdFieldVal">0.00 €</td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Зарезервировано (расход)</td>
-<td class="tdFieldVal"><span data-filter="Зарезервировано (расход)" data-crid="40817978300000055322" class="cp-link" data-action="get-statement-with-filter">0.00 €</span></td>
-</tr>
-<tr>
-<td class="whitespace"> </td>
-<td class="tdFieldName">Зарезервировано (поступления)</td>
-<td class="tdFieldVal"><span data-filter="Зарезервировано (приход)" data-crid="40817978300000055322" class="cp-link" data-action="get-statement-with-filter">0.00 €</span></td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Задолженность по комиссиям</td>
-<td class="tdFieldVal">0.00 €</td>
-</tr>
-<tr>
-<td class="whitespace"></td>
-<td class="tdFieldName">Перерасход (несанкционированный овердрафт)</td>
-<td class="tdFieldVal">0.00 €</td>
-</tr>
-</tbody></table>
-<div style="display:none;" id="details-40817978300000055322" class="bank-details"><table cellspacing="0" border="0" class="tableDetails"><tbody>
-<tr>
-<td valign="top" class="left">БАНК-ПОСРЕДНИК / INTERMEDIARY BANK</td>
-<td valign="top">Deutsche Bank AG, Frankfurt am Main, Germany<br>SWIFT: DEUTDEFFXXX</td>
-</tr>
-<tr>
-<td valign="top" class="left">БАНК-КОРРЕСПОНДЕНТ / CORRESPONDENT BANK</td>
-<td valign="top">ALFA-BANK, Moscow, Russia<br>SWIFT: ALFARUMMXXX</td>
-</tr>
-<tr>
-<td valign="top" class="left">БАНК-ПОЛУЧАТЕЛЬ / BENEFICIARY BANK</td>
-<td valign="top">BANK NEYVA LLC, EKATERINBURG, RUSSIA<br>SWIFT: CONYRU2NXXX<br>ACC. 30109978500000000050</td>
-</tr>
-<tr>
-<td valign="top" class="left">Получатель</td>
-<td valign="top">IVANOVICH IVANOV IVAN</td>
-</tr>
-<tr>
-<td valign="top" class="left">Счет получателя</td>
-<td valign="top">40817978300000055322</td>
-</tr>
-</tbody></table></div>
-<table class="tblBlock tabby" id="linked-cards" cellspacing="0" border="0">
-<tbody>
-<tr class="trHeader"><th colspan="6" class="blockName"><div class="row">
-<div class="small-3 column caption-table cards" data-action="show-cards">
-<div class="caption-text">Карты</div>
-<div class="caption-hint">Карты связанные со счётом </div>
-</div>
-<div class="small-4 column end data-filter"><div class="row"><div class="small-6 column right">
-<select class="cp-slider" style="display: none;"><option value="all">Все карты</option>
-<option selected value="activecards">Незакрытые</option></select><div class="outer-wrap row">
-<div class="slider" style="left: 160px;"></div>
-<div class="point text-center" style="left: 0px;"><div class="text">Все карты</div></div>
-<div class="point text-center active" style="left: 160px;"><div class="text">Незакрытые</div></div>
-</div>
-</div></div></div>
-</div></th></tr>
-<tr class="trSubHeader">
-<td class="whitespace"></td>
-<td>Номер</td>
-<td>Статус</td>
-<td class="text-center">Срок действия</td>
-<td>Описание</td>
-<td width="300"><div class="row"></div></td>
-</tr>
-</tbody>
-<tbody id="cards-list"><tr class="blockBody Active" data-status="Active">
-<td align="center" class="whitespace"><div class="badge horizontal-centered"></div></td>
-<td data-action="show-card-info" class="td-action" data-td-content="TokenCardPan">4375620000668899</td>
-<td data-action="show-card-info" class="td-action" data-td-content="TokenStatusTitle">Активна</td>
-<td data-action="show-card-info" class="td-action text-center" data-td-content="TokenExpDate">31.03.2021</td>
-<td data-action="show-card-info" data-td-content="TokenTitle">Visa Virtuon</td>
-<td><div class="row"><div class="small-3 right column">
-<div class="information" data-options="align:left" data-dropdown="" title=""></div>
-<ul id="drop-action-0" class="f-dropdown dropdown-list moreaction" data-dropdown-content="">
-<li data-action="get-card-statement" class="pic operhist cp-action"><div class="text">Список операций</div></li>
-<li data-action="show-payment-templates" class="pic templates cp-action"><div class="text">Мои шаблоны</div></li>
-</ul>
-</div></div></td>
-</tr></tbody>
-</table>
-<table data-view-type="list" class="tblBlock cp-page-list cp-last-transactions cp-tran-with-balance" cellspacing="0" border="0" id="bdLastTran">
-<thead>
-<tr class="trHeader"><th colspan="100" class="blockName"><div class="row">
-<div class="small-3 column caption-table operhist">
-<div class="caption-text">Последние операции</div>
-<div class="caption-hint"></div>
-</div>
-<div class="small-2 column text-center"></div>
-</div></th></tr>
-<tr class="trSubHeader cp-legend"><th colspan="100"><ul class="cp-marked-list">
-<li class="cp-item cp-income">Поступление</li>
-<li class="cp-item cp-processing">Списание</li>
-<li class="cp-item cp-write-off">Списание</li>
-<li class="cp-item cp-rejected">Отклонено</li>
-<li class="cp-item cp-cancel">Отмена</li>
-</ul></th></tr>
-<tr class="trSubHeader cp-header cp-sortable">
-<th data-sort-column-id="tranDate" title="Дата и время совершения операции" class="nowrap text-center cp-order cp-desc" data-action="sort-page-list"><div class="cp-content">Дата операции</div></th>
-<th title="Временная блокировка суммы операции, совершённой с использованием карты, до момента списания этой суммы со счета клиента. Зарезервированные денежные средства не доступны для повторного использования клиентом. Если расчёты по операции не будут произведены в течение 30 календарных дней, то резерв будет снят и зарезервированная сумма снова станет доступна для использования." class="tranListMoney nowrap cp-no-sort" data-sort-column-id="1">Зарезервировано</th>
-<th title="Тип и место совершения операции" class="text-center cp-no-sort" data-sort-column-id="2">Описание операции</th>
-<th title="Дата списания/зачисления средств со счёта" class="nowrap text-center cp-no-sort" data-sort-column-id="3">Дата обработки</th>
-<th title="Сумма по операции, совершённой с использованием карты, расчёты по которой уже проведены и сумма списана со счёта. Сумма, списанная со счёта, может отличаться от первоначально зарезервированной суммы по этой операции (например при совершении операции с конвертацией в другую валюту курс конвертации на дату проведения расчётов может отличаться от курса на дату совершения операции)." class="tranListMoney nowrap cp-no-sort" data-sort-column-id="4">Проведено</th>
-<th title="Комиссия за транзакцию" class="tranListMoney nowrap cp-no-sort" data-sort-column-id="5">Комиссия</th>
-<th title="Остаток на счете после транзакции" class="tranListMoney nowrap cp-no-sort cp-available-balance" data-sort-column-id="6">Доступный баланс</th>
-<th class="cp-no-sort cp-context-menu" data-sort-column-id="7"></th>
-</tr>
-</thead>
-<tbody style="">
-<tr tranid="150618000019588072" data-transaction-id="150618000019588072" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="4">
-<td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-1600:35:00">
-<div class="cp-time">16.11.2020<br><span style="font-size: 90%;">00:35:00</span>
-</div>
-<div class="cp-icon"></div>
+<td style="padding: 0;" align="left" valign="top">
+    <div id="divMain" style="" class="cp-page row">
+        <table xmlns:com="http://schemas.tranzaxis.com/common-types.xsd" data-page-item="" crid="40817810200000055320" class="tblBlock tbl-inform" cellspacing="0" border="0" data-contract-properties="{&quot;TypeId&quot;:&quot;885&quot;,&quot;Id&quot;:&quot;102233&quot;,&quot;Rid&quot;:&quot;40817810200000055320&quot;,&quot;Status&quot;:&quot;Active&quot;,&quot;Ccy&quot;:&quot;810&quot;}"
+            data-contract-extra-properties="{&quot;hasPayrollLink&quot;:false}">
+            <tbody>
+                <tr class="trHeader">
+                    <th colspan="6" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table contract">
+                                <div class="caption-text">Счёт</div>
+                                <div class="caption-hint">40817810200000055320</div>
+                            </div>
+                            <div class="small-2 column wrapper-moreaction right">
+                                <div class="row">
+                                    <div class="small-4 column right">
+                                        <div title="Дополнительно" data-dropdown="drop-action" data-options="align:left" class="information open" aria-expanded="true"></div>
+                                        <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction open drop-left f-open-dropdown" id="drop-action" style="position: absolute; left: -185px; top: 0px;" aria-hidden="false">
+                                            <li class="pic">
+                                                <div>
+                                                    <div class="text">Баланс</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="leger-balance text-right">
+                                                    <div id="moreContractLedgerBalance102233" class="">
+                                                        <div>1 000 000.00&nbsp;₽</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-crid="40817810200000055320" class="pic operhist cp-action" data-action="get-statement">
+                                                <div class="text">Список операций</div>
+                                            </li>
+                                            <li data-crid="40817810200000055320" class="pic bankdetails cp-action" data-action="show-bank-details">
+                                                <div class="text">Реквизиты банка</div>
+                                            </li>
+                                            <li data-crid="40817810200000055320" class="pic dotransfer cp-action" data-action="make-transfer">
+                                                <div class="text">Сделать перевод</div>
+                                            </li>
+                                            <li data-app-id="445" data-crid="40817810200000055320" data-action="application-withdrawal" class="pic cp-action create-application">
+                                                <div class="text">Заказ денежных средств</div>
+                                            </li>
+                                            <li class="pic cp-action application-order" data-action="CMI::ContractsApplicationOrder:1">
+                                                <div class="text">Заказ справки об остатке</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Описание счёта</td>
+                    <td class="tdFieldVal">
+                        <div class="row" id="contract-title">
+                            <div class="small-11 column" id="lnkContractTitle" ctitle="Счёт RUB">Счёт RUB</div>
+                            <div class="small-1 column edit" data-action="change-contract-title"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Валюта</td>
+                    <td class="tdFieldVal">Российский рубль</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Дата создания</td>
+                    <td class="tdFieldVal">01.11.2019</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Статус</td>
+                    <td class="tdFieldVal">Активный</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Доступный баланс</td>
+                    <td class="tdFieldVal"><span>1 000 000.00&nbsp;₽</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">В т.ч. собственных средств</td>
+                    <td class="tdFieldVal">1 000 000.00&nbsp;₽</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">В т.ч. средств за счет овердрафта</td>
+                    <td class="tdFieldVal">0.00&nbsp;₽</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Зарезервировано (расход)</td>
+                    <td class="tdFieldVal"><span data-filter="Зарезервировано (расход)" data-crid="40817810200000055320" class="cp-link" data-action="get-statement-with-filter">0.00&nbsp;₽</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace">&nbsp;</td>
+                    <td class="tdFieldName">Зарезервировано (поступления)</td>
+                    <td class="tdFieldVal"><span data-filter="Зарезервировано (приход)" data-crid="40817810200000055320" class="cp-link" data-action="get-statement-with-filter">0.00&nbsp;₽</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Задолженность по комиссиям</td>
+                    <td class="tdFieldVal">0.00&nbsp;₽</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Перерасход (несанкционированный овердрафт)</td>
+                    <td class="tdFieldVal">0.00&nbsp;₽</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="display:none;" id="details-40817810200000055320" class="bank-details">
+            <table cellspacing="0" border="0" class="tableDetails">
+                <tbody>
+                    <tr>
+                        <td valign="top" class="left">Банк получателя</td>
+                        <td valign="top">БАНК "НЕЙВА" ООО, ЕКАТЕРИНБУРГ</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">Корреспондентский счет</td>
+                        <td valign="top">30101810400000000774 в ГРКЦ ГУ БАНКА РОССИИ ПО СВЕРДЛОВСКОЙ ОБЛ.</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">БИК</td>
+                        <td valign="top">046577774</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">ИНН</td>
+                        <td valign="top">6629001024</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">КПП</td>
+                        <td valign="top">667101001</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">Получатель</td>
+                        <td valign="top">Иванов Иван Иванович</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">Счет получателя</td>
+                        <td valign="top">40817810200000055320</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table class="tblBlock tabby" id="linked-cards" cellspacing="0" border="0">
+            <tbody>
+                <tr class="trHeader">
+                    <th colspan="6" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table cards" data-action="show-cards">
+                                <div class="caption-text">Карты</div>
+                                <div class="caption-hint">Карты связанные со счётом </div>
+                            </div>
+                            <div class="small-4 column end data-filter">
+                                <div class="row">
+                                    <div class="small-6 column right"><select class="cp-slider" style="display: none;"><option value="all">Все карты</option><option selected="" value="activecards">Незакрытые</option></select>
+                                        <div class="outer-wrap row">
+                                            <div class="slider" style="left: 160px;"></div>
+                                            <div class="point text-center" style="left: 0px;">
+                                                <div class="text">Все карты</div>
+                                            </div>
+                                            <div class="point text-center active" style="left: 160px;">
+                                                <div class="text">Незакрытые</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="trSubHeader">
+                    <td class="whitespace"></td>
+                    <td>Номер</td>
+                    <td>Статус</td>
+                    <td class="text-center">Срок действия</td>
+                    <td>Описание</td>
+                    <td width="300">
+                        <div class="row"></div>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody id="cards-list">
+                <tr class="blockBody Active" data-status="Active">
+                    <td align="center" class="whitespace">
+                        <div class="badge horizontal-centered"></div>
+                    </td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenCardPan">4375620000224576</td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenStatusTitle">Активна</td>
+                    <td data-action="show-card-info" class="td-action text-center" data-td-content="TokenExpDate">30.11.2020</td>
+                    <td data-action="show-card-info" data-td-content="TokenTitle">Visa Classic</td>
+                    <td>
+                        <div class="row">
+                            <div class="small-3 right column">
+                                <div class="information" data-options="align:left" data-dropdown="" title=""></div>
+                                <ul id="drop-action-0" class="f-dropdown dropdown-list moreaction" data-dropdown-content="">
+                                    <li data-action="get-card-statement" class="pic operhist cp-action">
+                                        <div class="text">Список операций</div>
+                                    </li>
+                                    <li data-action="show-payment-templates" class="pic templates cp-action">
+                                        <div class="text">Мои шаблоны</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="blockBody Active" data-status="Active">
+                    <td align="center" class="whitespace">
+                        <div class="badge horizontal-centered"></div>
+                    </td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenCardPan">4375620000668899</td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenStatusTitle">Активна</td>
+                    <td data-action="show-card-info" class="td-action text-center" data-td-content="TokenExpDate">31.03.2021</td>
+                    <td data-action="show-card-info" data-td-content="TokenTitle">Visa Virtuon</td>
+                    <td>
+                        <div class="row">
+                            <div class="small-3 right column">
+                                <div class="information" data-options="align:left" data-dropdown="" title=""></div>
+                                <ul id="drop-action-1" class="f-dropdown dropdown-list moreaction" data-dropdown-content="">
+                                    <li data-action="get-card-statement" class="pic operhist cp-action">
+                                        <div class="text">Список операций</div>
+                                    </li>
+                                    <li data-action="show-payment-templates" class="pic templates cp-action">
+                                        <div class="text">Мои шаблоны</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table data-view-type="list" class="tblBlock cp-page-list cp-last-transactions cp-tran-with-balance" cellspacing="0" border="0" id="bdLastTran">
+            <thead>
+                <tr class="trHeader">
+                    <th colspan="100" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table operhist">
+                                <div class="caption-text">Последние операции</div>
+                                <div class="caption-hint"></div>
+                            </div>
+                            <div class="small-2 column text-center"></div>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="trSubHeader cp-legend">
+                    <th colspan="100">
+                        <ul class="cp-marked-list">
+                            <li class="cp-item cp-income">Поступление</li>
+                            <li class="cp-item cp-processing">Списание</li>
+                            <li class="cp-item cp-write-off">Списание</li>
+                            <li class="cp-item cp-rejected">Отклонено</li>
+                            <li class="cp-item cp-cancel">Отмена</li>
+                        </ul>
+                    </th>
+                </tr>
+                <tr class="trSubHeader cp-header cp-sortable">
+                    <th data-sort-column-id="tranDate" title="Дата и время совершения операции" class="nowrap text-center cp-order cp-desc" data-action="sort-page-list">
+                        <div class="cp-content">Дата операции</div>
+                    </th>
+                    <th title="Временная блокировка суммы операции, совершённой с использованием карты, до момента списания этой суммы со счета клиента. Зарезервированные денежные средства не доступны для повторного использования клиентом. Если расчёты по операции не будут произведены в течение 30 календарных дней, то резерв будет снят и зарезервированная сумма снова станет доступна для использования."
+                        class="tranListMoney nowrap cp-no-sort" data-sort-column-id="1">Зарезервировано</th>
+                    <th title="Тип и место совершения операции" class="text-center cp-no-sort" data-sort-column-id="2">Описание операции</th>
+                    <th title="Дата списания/зачисления средств со счёта" class="nowrap text-center cp-no-sort" data-sort-column-id="3">Дата обработки</th>
+                    <th title="Сумма по операции, совершённой с использованием карты, расчёты по которой уже проведены и сумма списана со счёта. Сумма, списанная со счёта, может отличаться от первоначально зарезервированной суммы по этой операции (например при совершении операции с конвертацией в другую валюту курс конвертации на дату проведения расчётов может отличаться от курса на дату совершения операции)."
+                        class="tranListMoney nowrap cp-no-sort" data-sort-column-id="4">Проведено</th>
+                    <th title="Комиссия за транзакцию" class="tranListMoney nowrap cp-no-sort" data-sort-column-id="5">Комиссия</th>
+                    <th title="Остаток на счете после транзакции" class="tranListMoney nowrap cp-no-sort cp-available-balance" data-sort-column-id="6">Доступный баланс</th>
+                    <th class="cp-no-sort cp-context-menu" data-sort-column-id="7"></th>
+                </tr>
+            </thead>
+            <tbody style="">
+                <tr tranid="150618000019588072" data-transaction-id="150618000019588072" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="4">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:45:34">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:45:34</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:45:34</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">50.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">50.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 21.11.2020 21:45:34, Сумма 50.00 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150618000019588072">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019588072" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Оплата услуг</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">50.00&nbsp;₽<input value="50" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">50.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 21.11.2020 21:45:34, Сумма 50.00 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Номер телефона</td>
+                                                <td class="tdFieldVal">9111111111<input value="9111111111" name="p__number" type="hidden"><input value="Номер телефона" name="t__number" type="hidden"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--4">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="50.00">50.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">50.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019588072"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019588072"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000019579526" data-transaction-id="150618000019579526" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="3">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:45:34">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:45:34</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:45:34</td>
+                    <td class="cp-export-only cp-export">Выдача наличных</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">1 000.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">1 000.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Выдача наличных, 21.11.2020 21:45:34, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.
+                        <div style="display:none;" id="details150618000019579526">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019579526" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Выдача наличных</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">1 000.00&nbsp;₽<input value="1000" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">1 000.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">ATM,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Выдача наличных, 21.11.2020 21:45:34, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--3">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="1000.00">1 000.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">1 000.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019579526"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019579526"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000019594094" data-transaction-id="150618000019594094" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="2">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:45:34">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:45:34</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:45:34</td>
+                    <td class="cp-export-only cp-export">Покупка</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">99.29&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">99.29</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата товара/услуги, 21.11.2020 21:45:34, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395
+                        <div style="display:none;" id="details150618000019594094">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019594094" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Оплата товаров/услуг</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">99.29&nbsp;₽<input value="99.29" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Зарезервировано</td>
+                                                <td class="tdFieldVal">99.29&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">99.29&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Код подтверждения</td>
+                                                <td class="tdFieldVal">418395</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Время совершения операции</td>
+                                                <td class="tdFieldVal">21.11.2020&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">eCommerce,&nbsp;Великобритания,&nbsp;INTERNET,&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Оплата товара/услуги, 21.11.2020 21:45:34, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--2">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="99.29">99.29&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">99.29</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019594094"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019594094"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000016203288" data-transaction-id="150618000016203288" class="cp-item cp-transaction cp-income" data-mcc="0000" data-sort-original-position="1">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:45:34">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:45:34</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:45:34</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">200.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">200.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Перевод просто так, 21.11.2020 21:45:34, Сумма 200.00 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150618000016203288">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000016203288" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Перевод по заявлению клиента</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">200.00&nbsp;₽<input value="200" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">200.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Перевод просто так, 21.11.2020 21:45:34, Сумма 200.00 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--1">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="200.00">200.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">200.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000016203288"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000016203288"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150617000016200984" data-transaction-id="150617000016200984" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="0">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:45:34">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:45:34</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:45:34</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">100.08&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">100.08</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Покупка/продажа иностранной валюты от 21/11/2020. Без НДС, 21.11.2020 21:45:34, Сумма 100.08 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150617000016200984">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150617000016200984" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Перевод по заявлению клиента</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">100.08&nbsp;₽<input value="100.08" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">100.08&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Покупка/продажа иностранной валюты от 21/11/2020. Без НДС, 21.11.2020 21:45:34, Сумма 100.08 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--0">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="100.08">100.08&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">100.08</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150617000016200984"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150617000016200984"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="nofltr" style="display:none">
+                    <td id="tranReportForms" colspan="8"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" id="divContextHelp"></div>
 </td>
-<td class="cp-export-only cp-export">16.11.2020 00:35:00</td>
-<td class="cp-export-only cp-export">Платеж</td>
-<td class="cp-export-only cp-export">RUR</td>
-<td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">50.00 ₽</td>
-<td class="cp-export-only cp-export">50.00</td>
-<td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 16.11.2020 00:35:00, Сумма 50.00 RUB, Банк-он-Лайн<div style="display:none;" id="details150618000019588072"><form class="frmDetails">
-<input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019588072" name="TranId" type="hidden"><div class="wrap-details"><table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0"><tbody>
-<tr class="blockBody">
-<td class="tdFieldName">Статус</td>
-<td class="tdFieldVal">Успешно </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Тип операции</td>
-<td class="tdFieldVal">Оплата услуг</td>
-</tr>
-<tr class="blockBody"></tr>
-<tr class="blockBody">
-<td class="tdFieldName">Сумма операции</td>
-<td style="padding-right: 10px !important;" nowrap class="tdFieldVal">50.00 ₽<input value="50" name="Amount" type="hidden">
+<td style="padding: 0;" align="left" valign="top">
+    <div id="divMain" style="" class="cp-page row">
+        <table xmlns:com="http://schemas.tranzaxis.com/common-types.xsd" data-page-item="" crid="40817840400000055321" class="tblBlock tbl-inform" cellspacing="0" border="0" data-contract-properties="{&quot;TypeId&quot;:&quot;888&quot;,&quot;Id&quot;:&quot;102234&quot;,&quot;Rid&quot;:&quot;40817840400000055321&quot;,&quot;Status&quot;:&quot;Active&quot;,&quot;Ccy&quot;:&quot;840&quot;}"
+            data-contract-extra-properties="{&quot;hasPayrollLink&quot;:false}">
+            <tbody>
+                <tr class="trHeader">
+                    <th colspan="6" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table contract">
+                                <div class="caption-text">Счёт</div>
+                                <div class="caption-hint">40817840400000055321</div>
+                            </div>
+                            <div class="small-2 column wrapper-moreaction right">
+                                <div class="row">
+                                    <div class="small-4 column right">
+                                        <div title="Дополнительно" data-dropdown="drop-action" data-options="align:left" class="information open" aria-expanded="true"></div>
+                                        <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction open drop-left f-open-dropdown" id="drop-action" style="position: absolute; left: -185px; top: 0px;" aria-hidden="false">
+                                            <li class="pic">
+                                                <div>
+                                                    <div class="text">Баланс</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="leger-balance text-right">
+                                                    <div id="moreContractLedgerBalance102234" class="">
+                                                        <div>100 000.00&nbsp;$</div>
+                                                        <div><span title="примерно">≈</span>7 720 000.00&nbsp;₽</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-crid="40817840400000055321" class="pic operhist cp-action" data-action="get-statement">
+                                                <div class="text">Список операций</div>
+                                            </li>
+                                            <li data-crid="40817840400000055321" class="pic bankdetails cp-action" data-action="show-bank-details">
+                                                <div class="text">Реквизиты банка</div>
+                                            </li>
+                                            <li data-crid="40817840400000055321" class="pic dotransfer cp-action" data-action="make-transfer">
+                                                <div class="text">Сделать перевод</div>
+                                            </li>
+                                            <li data-app-id="445" data-crid="40817840400000055321" data-action="application-withdrawal" class="pic cp-action create-application">
+                                                <div class="text">Заказ денежных средств</div>
+                                            </li>
+                                            <li class="pic cp-action application-order" data-action="CMI::ContractsApplicationOrder:1">
+                                                <div class="text">Заказ справки об остатке</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Описание счёта</td>
+                    <td class="tdFieldVal">
+                        <div class="row" id="contract-title">
+                            <div class="small-11 column" id="lnkContractTitle" ctitle="Счёт USD">Счёт USD</div>
+                            <div class="small-1 column edit" data-action="change-contract-title"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Валюта</td>
+                    <td class="tdFieldVal">Доллар США</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Дата создания</td>
+                    <td class="tdFieldVal">01.11.2019</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Статус</td>
+                    <td class="tdFieldVal">Активный</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Доступный баланс</td>
+                    <td class="tdFieldVal"><span>100 000.00&nbsp;$</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">В т.ч. собственных средств</td>
+                    <td class="tdFieldVal">100 000.00&nbsp;$</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">В т.ч. средств за счет овердрафта</td>
+                    <td class="tdFieldVal">0.00&nbsp;$</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Зарезервировано (расход)</td>
+                    <td class="tdFieldVal"><span data-filter="Зарезервировано (расход)" data-crid="40817840400000055321" class="cp-link" data-action="get-statement-with-filter">0.00&nbsp;$</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace">&nbsp;</td>
+                    <td class="tdFieldName">Зарезервировано (поступления)</td>
+                    <td class="tdFieldVal"><span data-filter="Зарезервировано (приход)" data-crid="40817840400000055321" class="cp-link" data-action="get-statement-with-filter">0.00&nbsp;$</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Задолженность по комиссиям</td>
+                    <td class="tdFieldVal">0.00&nbsp;$</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Перерасход (несанкционированный овердрафт)</td>
+                    <td class="tdFieldVal">0.00&nbsp;$</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="display:none;" id="details-40817840400000055321" class="bank-details">
+            <table cellspacing="0" border="0" class="tableDetails">
+                <tbody>
+                    <tr>
+                        <td valign="top" class="left">БАНК-ПОСРЕДНИК / INTERMEDIARY BANK</td>
+                        <td valign="top">Deutsche Bank Trust Company, Americas, New York, USA<br>SWIFT: BKTRUS33XXX</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">БАНК-КОРРЕСПОНДЕНТ / CORRESPONDENT BANK</td>
+                        <td valign="top">ALFA-BANK, Moscow, Russia<br>SWIFT: ALFARUMMXXX</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">БАНК-ПОЛУЧАТЕЛЬ / BENEFICIARY BANK</td>
+                        <td valign="top">BANK NEYVA LLC, EKATERINBURG, RUSSIA <br>SWIFT: CONYRU2NXXX <br>ACC. 30109840300000000278</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">Получатель</td>
+                        <td valign="top">IVANOVICH&nbsp;IVANOV&nbsp;IVAN</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">Счет получателя</td>
+                        <td valign="top">40817840400000055321</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table class="tblBlock tabby" id="linked-cards" cellspacing="0" border="0">
+            <tbody>
+                <tr class="trHeader">
+                    <th colspan="6" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table cards" data-action="show-cards">
+                                <div class="caption-text">Карты</div>
+                                <div class="caption-hint">Карты связанные со счётом </div>
+                            </div>
+                            <div class="small-4 column end data-filter">
+                                <div class="row">
+                                    <div class="small-6 column right"><select class="cp-slider" style="display: none;"><option value="all">Все карты</option><option selected="" value="activecards">Незакрытые</option></select>
+                                        <div class="outer-wrap row">
+                                            <div class="slider" style="left: 160px;"></div>
+                                            <div class="point text-center" style="left: 0px;">
+                                                <div class="text">Все карты</div>
+                                            </div>
+                                            <div class="point text-center active" style="left: 160px;">
+                                                <div class="text">Незакрытые</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="trSubHeader">
+                    <td class="whitespace"></td>
+                    <td>Номер</td>
+                    <td>Статус</td>
+                    <td class="text-center">Срок действия</td>
+                    <td>Описание</td>
+                    <td width="300">
+                        <div class="row"></div>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody id="cards-list">
+                <tr class="blockBody Active" data-status="Active">
+                    <td align="center" class="whitespace">
+                        <div class="badge horizontal-centered"></div>
+                    </td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenCardPan">4375620000668899</td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenStatusTitle">Активна</td>
+                    <td data-action="show-card-info" class="td-action text-center" data-td-content="TokenExpDate">31.03.2021</td>
+                    <td data-action="show-card-info" data-td-content="TokenTitle">Visa Virtuon</td>
+                    <td>
+                        <div class="row">
+                            <div class="small-3 right column">
+                                <div class="information" data-options="align:left" data-dropdown="" title=""></div>
+                                <ul id="drop-action-0" class="f-dropdown dropdown-list moreaction" data-dropdown-content="">
+                                    <li data-action="get-card-statement" class="pic operhist cp-action">
+                                        <div class="text">Список операций</div>
+                                    </li>
+                                    <li data-action="show-payment-templates" class="pic templates cp-action">
+                                        <div class="text">Мои шаблоны</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table data-view-type="list" class="tblBlock cp-page-list cp-last-transactions cp-tran-with-balance" cellspacing="0" border="0" id="bdLastTran">
+            <thead>
+                <tr class="trHeader">
+                    <th colspan="100" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table operhist">
+                                <div class="caption-text">Последние операции</div>
+                                <div class="caption-hint"></div>
+                            </div>
+                            <div class="small-2 column text-center"></div>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="trSubHeader cp-legend">
+                    <th colspan="100">
+                        <ul class="cp-marked-list">
+                            <li class="cp-item cp-income">Поступление</li>
+                            <li class="cp-item cp-processing">Списание</li>
+                            <li class="cp-item cp-write-off">Списание</li>
+                            <li class="cp-item cp-rejected">Отклонено</li>
+                            <li class="cp-item cp-cancel">Отмена</li>
+                        </ul>
+                    </th>
+                </tr>
+                <tr class="trSubHeader cp-header cp-sortable">
+                    <th data-sort-column-id="tranDate" title="Дата и время совершения операции" class="nowrap text-center cp-order cp-desc" data-action="sort-page-list">
+                        <div class="cp-content">Дата операции</div>
+                    </th>
+                    <th title="Временная блокировка суммы операции, совершённой с использованием карты, до момента списания этой суммы со счета клиента. Зарезервированные денежные средства не доступны для повторного использования клиентом. Если расчёты по операции не будут произведены в течение 30 календарных дней, то резерв будет снят и зарезервированная сумма снова станет доступна для использования."
+                        class="tranListMoney nowrap cp-no-sort" data-sort-column-id="1">Зарезервировано</th>
+                    <th title="Тип и место совершения операции" class="text-center cp-no-sort" data-sort-column-id="2">Описание операции</th>
+                    <th title="Дата списания/зачисления средств со счёта" class="nowrap text-center cp-no-sort" data-sort-column-id="3">Дата обработки</th>
+                    <th title="Сумма по операции, совершённой с использованием карты, расчёты по которой уже проведены и сумма списана со счёта. Сумма, списанная со счёта, может отличаться от первоначально зарезервированной суммы по этой операции (например при совершении операции с конвертацией в другую валюту курс конвертации на дату проведения расчётов может отличаться от курса на дату совершения операции)."
+                        class="tranListMoney nowrap cp-no-sort" data-sort-column-id="4">Проведено</th>
+                    <th title="Комиссия за транзакцию" class="tranListMoney nowrap cp-no-sort" data-sort-column-id="5">Комиссия</th>
+                    <th title="Остаток на счете после транзакции" class="tranListMoney nowrap cp-no-sort cp-available-balance" data-sort-column-id="6">Доступный баланс</th>
+                    <th class="cp-no-sort cp-context-menu" data-sort-column-id="7"></th>
+                </tr>
+            </thead>
+            <tbody style="">
+                <tr tranid="150618000019588072" data-transaction-id="150618000019588072" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="4">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:13">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:13</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:13</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">50.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">50.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 21.11.2020 21:46:13, Сумма 50.00 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150618000019588072">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019588072" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Оплата услуг</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">50.00&nbsp;₽<input value="50" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">50.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 21.11.2020 21:46:13, Сумма 50.00 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Номер телефона</td>
+                                                <td class="tdFieldVal">9111111111<input value="9111111111" name="p__number" type="hidden"><input value="Номер телефона" name="t__number" type="hidden"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--4">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="50.00">50.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">50.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019588072"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019588072"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000019579526" data-transaction-id="150618000019579526" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="3">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:13">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:13</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:13</td>
+                    <td class="cp-export-only cp-export">Выдача наличных</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">1 000.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">1 000.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Выдача наличных, 21.11.2020 21:46:13, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.
+                        <div style="display:none;" id="details150618000019579526">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019579526" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Выдача наличных</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">1 000.00&nbsp;₽<input value="1000" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">1 000.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">ATM,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Выдача наличных, 21.11.2020 21:46:13, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--3">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="1000.00">1 000.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">1 000.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019579526"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019579526"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000019594094" data-transaction-id="150618000019594094" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="2">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:13">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:13</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:13</td>
+                    <td class="cp-export-only cp-export">Покупка</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">99.29&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">99.29</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата товара/услуги, 21.11.2020 21:46:13, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395
+                        <div style="display:none;" id="details150618000019594094">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019594094" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Оплата товаров/услуг</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">99.29&nbsp;₽<input value="99.29" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Зарезервировано</td>
+                                                <td class="tdFieldVal">99.29&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">99.29&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Код подтверждения</td>
+                                                <td class="tdFieldVal">418395</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Время совершения операции</td>
+                                                <td class="tdFieldVal">21.11.2020&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">eCommerce,&nbsp;Великобритания,&nbsp;INTERNET,&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Оплата товара/услуги, 21.11.2020 21:46:13, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--2">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="99.29">99.29&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">99.29</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019594094"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019594094"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000016203288" data-transaction-id="150618000016203288" class="cp-item cp-transaction cp-income" data-mcc="0000" data-sort-original-position="1">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:13">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:13</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:13</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">200.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">200.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Перевод просто так, 21.11.2020 21:46:13, Сумма 200.00 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150618000016203288">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000016203288" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Перевод по заявлению клиента</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">200.00&nbsp;₽<input value="200" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">200.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Перевод просто так, 21.11.2020 21:46:13, Сумма 200.00 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--1">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="200.00">200.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">200.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000016203288"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000016203288"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150617000016200984" data-transaction-id="150617000016200984" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="0">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:13">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:13</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:13</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">100.08&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">100.08</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Покупка/продажа иностранной валюты от 21/11/2020. Без НДС, 21.11.2020 21:46:13, Сумма 100.08 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150617000016200984">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150617000016200984" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Перевод по заявлению клиента</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">100.08&nbsp;₽<input value="100.08" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">100.08&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Покупка/продажа иностранной валюты от 21/11/2020. Без НДС, 21.11.2020 21:46:13, Сумма 100.08 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--0">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="100.08">100.08&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">100.08</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150617000016200984"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150617000016200984"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="nofltr" style="display:none">
+                    <td id="tranReportForms" colspan="8"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" id="divContextHelp"></div>
 </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Проведено</td>
-<td class="tdFieldVal">50.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Комиссия</td>
-<td class="tdFieldVal">0.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Дата обработки</td>
-<td class="tdFieldVal">16.11.2020</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Информация о терминале</td>
-<td class="tdFieldVal">Bank-on-line, Россия, Ekaterinburg, ul. Chapaeva 3a</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Описание</td>
-<td class="tdFieldVal">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 16.11.2020 00:35:00, Сумма 50.00 RUB, Банк-он-Лайн</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Номер телефона</td>
-<td class="tdFieldVal">9111111111<input value="9111111111" name="p__number" type="hidden"><input value="Номер телефона" name="t__number" type="hidden">
+<td style="padding: 0;" align="left" valign="top">
+    <div id="divMain" style="" class="cp-page row">
+        <table xmlns:com="http://schemas.tranzaxis.com/common-types.xsd" data-page-item="" crid="40817978300000055322" class="tblBlock tbl-inform" cellspacing="0" border="0" data-contract-properties="{&quot;TypeId&quot;:&quot;889&quot;,&quot;Id&quot;:&quot;102235&quot;,&quot;Rid&quot;:&quot;40817978300000055322&quot;,&quot;Status&quot;:&quot;Active&quot;,&quot;Ccy&quot;:&quot;978&quot;}"
+            data-contract-extra-properties="{&quot;hasPayrollLink&quot;:false}">
+            <tbody>
+                <tr class="trHeader">
+                    <th colspan="6" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table contract">
+                                <div class="caption-text">Счёт</div>
+                                <div class="caption-hint">40817978300000055322</div>
+                            </div>
+                            <div class="small-2 column wrapper-moreaction right">
+                                <div class="row">
+                                    <div class="small-4 column right">
+                                        <div title="Дополнительно" data-dropdown="drop-action" data-options="align:left" class="information open" aria-expanded="true"></div>
+                                        <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction open drop-left f-open-dropdown" id="drop-action" style="position: absolute; left: -185px; top: 0px;" aria-hidden="false">
+                                            <li class="pic">
+                                                <div>
+                                                    <div class="text">Баланс</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="leger-balance text-right">
+                                                    <div id="moreContractLedgerBalance102235" class="">
+                                                        <div>100 000.00&nbsp;€</div>
+                                                        <div><span title="примерно">≈</span>9 130 000.00&nbsp;₽</div>
+                                                        <div><span title="примерно">≈</span>122 220.00&nbsp;$</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-crid="40817978300000055322" class="pic operhist cp-action" data-action="get-statement">
+                                                <div class="text">Список операций</div>
+                                            </li>
+                                            <li data-crid="40817978300000055322" class="pic bankdetails cp-action" data-action="show-bank-details">
+                                                <div class="text">Реквизиты банка</div>
+                                            </li>
+                                            <li data-crid="40817978300000055322" class="pic dotransfer cp-action" data-action="make-transfer">
+                                                <div class="text">Сделать перевод</div>
+                                            </li>
+                                            <li data-app-id="445" data-crid="40817978300000055322" data-action="application-withdrawal" class="pic cp-action create-application">
+                                                <div class="text">Заказ денежных средств</div>
+                                            </li>
+                                            <li class="pic cp-action application-order" data-action="CMI::ContractsApplicationOrder:1">
+                                                <div class="text">Заказ справки об остатке</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Описание счёта</td>
+                    <td class="tdFieldVal">
+                        <div class="row" id="contract-title">
+                            <div class="small-11 column" id="lnkContractTitle" ctitle="Счёт EUR">Счёт EUR</div>
+                            <div class="small-1 column edit" data-action="change-contract-title"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Валюта</td>
+                    <td class="tdFieldVal">Евро</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Дата создания</td>
+                    <td class="tdFieldVal">01.11.2019</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Статус</td>
+                    <td class="tdFieldVal">Активный</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Доступный баланс</td>
+                    <td class="tdFieldVal"><span>100 000.00&nbsp;€</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">В т.ч. собственных средств</td>
+                    <td class="tdFieldVal">100 000.00&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">В т.ч. средств за счет овердрафта</td>
+                    <td class="tdFieldVal">0.00&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Зарезервировано (расход)</td>
+                    <td class="tdFieldVal"><span data-filter="Зарезервировано (расход)" data-crid="40817978300000055322" class="cp-link" data-action="get-statement-with-filter">0.00&nbsp;€</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace">&nbsp;</td>
+                    <td class="tdFieldName">Зарезервировано (поступления)</td>
+                    <td class="tdFieldVal"><span data-filter="Зарезервировано (приход)" data-crid="40817978300000055322" class="cp-link" data-action="get-statement-with-filter">0.00&nbsp;€</span></td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Задолженность по комиссиям</td>
+                    <td class="tdFieldVal">0.00&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td class="whitespace"></td>
+                    <td class="tdFieldName">Перерасход (несанкционированный овердрафт)</td>
+                    <td class="tdFieldVal">0.00&nbsp;€</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="display:none;" id="details-40817978300000055322" class="bank-details">
+            <table cellspacing="0" border="0" class="tableDetails">
+                <tbody>
+                    <tr>
+                        <td valign="top" class="left">БАНК-ПОСРЕДНИК / INTERMEDIARY BANK</td>
+                        <td valign="top">Deutsche Bank AG, Frankfurt am Main, Germany<br>SWIFT: DEUTDEFFXXX</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">БАНК-КОРРЕСПОНДЕНТ / CORRESPONDENT BANK</td>
+                        <td valign="top">ALFA-BANK, Moscow, Russia<br>SWIFT: ALFARUMMXXX</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">БАНК-ПОЛУЧАТЕЛЬ / BENEFICIARY BANK</td>
+                        <td valign="top">BANK NEYVA LLC, EKATERINBURG, RUSSIA<br>SWIFT: CONYRU2NXXX<br>ACC. 30109978500000000050</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">Получатель</td>
+                        <td valign="top">IVANOVICH&nbsp;IVANOV&nbsp;IVAN</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="left">Счет получателя</td>
+                        <td valign="top">40817978300000055322</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table class="tblBlock tabby" id="linked-cards" cellspacing="0" border="0">
+            <tbody>
+                <tr class="trHeader">
+                    <th colspan="6" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table cards" data-action="show-cards">
+                                <div class="caption-text">Карты</div>
+                                <div class="caption-hint">Карты связанные со счётом </div>
+                            </div>
+                            <div class="small-4 column end data-filter">
+                                <div class="row">
+                                    <div class="small-6 column right"><select class="cp-slider" style="display: none;"><option value="all">Все карты</option><option selected="" value="activecards">Незакрытые</option></select>
+                                        <div class="outer-wrap row">
+                                            <div class="slider" style="left: 160px;"></div>
+                                            <div class="point text-center" style="left: 0px;">
+                                                <div class="text">Все карты</div>
+                                            </div>
+                                            <div class="point text-center active" style="left: 160px;">
+                                                <div class="text">Незакрытые</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="trSubHeader">
+                    <td class="whitespace"></td>
+                    <td>Номер</td>
+                    <td>Статус</td>
+                    <td class="text-center">Срок действия</td>
+                    <td>Описание</td>
+                    <td width="300">
+                        <div class="row"></div>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody id="cards-list">
+                <tr class="blockBody Active" data-status="Active">
+                    <td align="center" class="whitespace">
+                        <div class="badge horizontal-centered"></div>
+                    </td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenCardPan">4375620000668899</td>
+                    <td data-action="show-card-info" class="td-action" data-td-content="TokenStatusTitle">Активна</td>
+                    <td data-action="show-card-info" class="td-action text-center" data-td-content="TokenExpDate">31.03.2021</td>
+                    <td data-action="show-card-info" data-td-content="TokenTitle">Visa Virtuon</td>
+                    <td>
+                        <div class="row">
+                            <div class="small-3 right column">
+                                <div class="information" data-options="align:left" data-dropdown="" title=""></div>
+                                <ul id="drop-action-0" class="f-dropdown dropdown-list moreaction" data-dropdown-content="">
+                                    <li data-action="get-card-statement" class="pic operhist cp-action">
+                                        <div class="text">Список операций</div>
+                                    </li>
+                                    <li data-action="show-payment-templates" class="pic templates cp-action">
+                                        <div class="text">Мои шаблоны</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table data-view-type="list" class="tblBlock cp-page-list cp-last-transactions cp-tran-with-balance" cellspacing="0" border="0" id="bdLastTran">
+            <thead>
+                <tr class="trHeader">
+                    <th colspan="100" class="blockName">
+                        <div class="row">
+                            <div class="small-3 column caption-table operhist">
+                                <div class="caption-text">Последние операции</div>
+                                <div class="caption-hint"></div>
+                            </div>
+                            <div class="small-2 column text-center"></div>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="trSubHeader cp-legend">
+                    <th colspan="100">
+                        <ul class="cp-marked-list">
+                            <li class="cp-item cp-income">Поступление</li>
+                            <li class="cp-item cp-processing">Списание</li>
+                            <li class="cp-item cp-write-off">Списание</li>
+                            <li class="cp-item cp-rejected">Отклонено</li>
+                            <li class="cp-item cp-cancel">Отмена</li>
+                        </ul>
+                    </th>
+                </tr>
+                <tr class="trSubHeader cp-header cp-sortable">
+                    <th data-sort-column-id="tranDate" title="Дата и время совершения операции" class="nowrap text-center cp-order cp-desc" data-action="sort-page-list">
+                        <div class="cp-content">Дата операции</div>
+                    </th>
+                    <th title="Временная блокировка суммы операции, совершённой с использованием карты, до момента списания этой суммы со счета клиента. Зарезервированные денежные средства не доступны для повторного использования клиентом. Если расчёты по операции не будут произведены в течение 30 календарных дней, то резерв будет снят и зарезервированная сумма снова станет доступна для использования."
+                        class="tranListMoney nowrap cp-no-sort" data-sort-column-id="1">Зарезервировано</th>
+                    <th title="Тип и место совершения операции" class="text-center cp-no-sort" data-sort-column-id="2">Описание операции</th>
+                    <th title="Дата списания/зачисления средств со счёта" class="nowrap text-center cp-no-sort" data-sort-column-id="3">Дата обработки</th>
+                    <th title="Сумма по операции, совершённой с использованием карты, расчёты по которой уже проведены и сумма списана со счёта. Сумма, списанная со счёта, может отличаться от первоначально зарезервированной суммы по этой операции (например при совершении операции с конвертацией в другую валюту курс конвертации на дату проведения расчётов может отличаться от курса на дату совершения операции)."
+                        class="tranListMoney nowrap cp-no-sort" data-sort-column-id="4">Проведено</th>
+                    <th title="Комиссия за транзакцию" class="tranListMoney nowrap cp-no-sort" data-sort-column-id="5">Комиссия</th>
+                    <th title="Остаток на счете после транзакции" class="tranListMoney nowrap cp-no-sort cp-available-balance" data-sort-column-id="6">Доступный баланс</th>
+                    <th class="cp-no-sort cp-context-menu" data-sort-column-id="7"></th>
+                </tr>
+            </thead>
+            <tbody style="">
+                <tr tranid="150618000019588072" data-transaction-id="150618000019588072" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="4">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:27">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:27</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:27</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">50.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">50.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 21.11.2020 21:46:27, Сумма 50.00 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150618000019588072">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019588072" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Оплата услуг</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">50.00&nbsp;₽<input value="50" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">50.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Оплата услуг МегаФон Урал, Номер телефона: 79111111111, 21.11.2020 21:46:27, Сумма 50.00 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Номер телефона</td>
+                                                <td class="tdFieldVal">9111111111<input value="9111111111" name="p__number" type="hidden"><input value="Номер телефона" name="t__number" type="hidden"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--4">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="50.00">50.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">50.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019588072"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019588072"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000019579526" data-transaction-id="150618000019579526" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="3">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:27">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:27</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:27</td>
+                    <td class="cp-export-only cp-export">Выдача наличных</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">1 000.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">1 000.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Выдача наличных, 21.11.2020 21:46:27, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.
+                        <div style="display:none;" id="details150618000019579526">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019579526" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Выдача наличных</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">1 000.00&nbsp;₽<input value="1000" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">1 000.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">ATM,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Выдача наличных, 21.11.2020 21:46:27, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--3">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="1000.00">1 000.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">1 000.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019579526"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019579526"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000019594094" data-transaction-id="150618000019594094" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="2">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:27">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:27</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:27</td>
+                    <td class="cp-export-only cp-export">Покупка</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">99.29&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">99.29</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата товара/услуги, 21.11.2020 21:46:27, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395
+                        <div style="display:none;" id="details150618000019594094">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019594094" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Оплата товаров/услуг</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">99.29&nbsp;₽<input value="99.29" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Зарезервировано</td>
+                                                <td class="tdFieldVal">99.29&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">99.29&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Код подтверждения</td>
+                                                <td class="tdFieldVal">418395</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Время совершения операции</td>
+                                                <td class="tdFieldVal">21.11.2020&nbsp;21:46:27</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">eCommerce,&nbsp;Великобритания,&nbsp;INTERNET,&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Оплата товара/услуги, 21.11.2020 21:46:27, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--2">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="99.29">99.29&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">99.29</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only">437562******4576</td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019594094"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019594094"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150618000016203288" data-transaction-id="150618000016203288" class="cp-item cp-transaction cp-income" data-mcc="0000" data-sort-original-position="1">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:27">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:27</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:27</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">200.00&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">200.00</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Перевод просто так, 21.11.2020 21:46:27, Сумма 200.00 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150618000016203288">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000016203288" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Перевод по заявлению клиента</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">200.00&nbsp;₽<input value="200" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">200.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Перевод просто так, 21.11.2020 21:46:27, Сумма 200.00 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--1">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="200.00">200.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">200.00</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000016203288"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000016203288"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr tranid="150617000016200984" data-transaction-id="150617000016200984" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="0">
+                    <td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-2121:46:27">
+                        <div class="cp-time">21.11.2020<br><span style="font-size: 90%;">21:46:27</span></div>
+                        <div class="cp-icon"></div>
+                    </td>
+                    <td class="cp-export-only cp-export">21.11.2020 21:46:27</td>
+                    <td class="cp-export-only cp-export">Платеж</td>
+                    <td class="cp-export-only cp-export">RUR</td>
+                    <td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">100.08&nbsp;₽</td>
+                    <td class="cp-export-only cp-export">100.08</td>
+                    <td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Покупка/продажа иностранной валюты от 21/11/2020. Без НДС, 21.11.2020 21:46:27, Сумма 100.08 RUB, Банк-он-Лайн
+                        <div style="display:none;" id="details150617000016200984">
+                            <form class="frmDetails"><input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150617000016200984" name="TranId" type="hidden">
+                                <div class="wrap-details">
+                                    <table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Статус</td>
+                                                <td class="tdFieldVal">Успешно&nbsp;</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Тип операции</td>
+                                                <td class="tdFieldVal">Перевод по заявлению клиента</td>
+                                            </tr>
+                                            <tr class="blockBody"></tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Сумма операции</td>
+                                                <td style="padding-right: 10px !important;" nowrap="true" class="tdFieldVal">100.08&nbsp;₽<input value="100.08" name="Amount" type="hidden"></td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Проведено</td>
+                                                <td class="tdFieldVal">100.08&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Комиссия</td>
+                                                <td class="tdFieldVal">0.00&nbsp;₽</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Дата обработки</td>
+                                                <td class="tdFieldVal">21.11.2020</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Информация о терминале</td>
+                                                <td class="tdFieldVal">Bank-on-line,&nbsp;Россия,&nbsp;Ekaterinburg,&nbsp;ul. Chapaeva 3a</td>
+                                            </tr>
+                                            <tr class="blockBody">
+                                                <td class="tdFieldName">Описание</td>
+                                                <td class="tdFieldVal">Покупка/продажа иностранной валюты от 21/11/2020. Без НДС, 21.11.2020 21:46:27, Сумма 100.08 RUB, Банк-он-Лайн</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-21--0">21.11.2020</td>
+                    <td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="100.08">100.08&nbsp;₽</td>
+                    <td class="cp-export cp-export-only">100.08</td>
+                    <td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00&nbsp;₽</td>
+                    <td class="cp-export cp-export-only"> 0.00</td>
+                    <td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
+                    <td class="cp-export cp-export-only"></td>
+                    <td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;">
+                        <div class="row">
+                            <div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
+                                <div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150617000016200984"></div>
+                                <ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150617000016200984"></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="nofltr" style="display:none">
+                    <td id="tranReportForms" colspan="8"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" id="divContextHelp"></div>
 </td>
-</tr>
-</tbody></table></div>
-</form></div>
-</td>
-<td class="cp-export cp-export-only"></td>
-<td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-16--4">16.11.2020</td>
-<td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="50.00">50.00 ₽</td>
-<td class="cp-export cp-export-only">50.00</td>
-<td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00 ₽</td>
-<td class="cp-export cp-export-only"> 0.00</td>
-<td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
-<td class="cp-export cp-export-only">437562******4576</td>
-<td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;"><div class="row"><div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
-<div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019588072"></div>
-<ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019588072"></ul>
-</div></div></td>
-</tr>
-<tr tranid="150618000019579526" data-transaction-id="150618000019579526" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="3">
-<td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-1600:35:00">
-<div class="cp-time">16.11.2020<br><span style="font-size: 90%;">00:35:00</span>
-</div>
-<div class="cp-icon"></div>
-</td>
-<td class="cp-export-only cp-export">16.11.2020 00:35:00</td>
-<td class="cp-export-only cp-export">Выдача наличных</td>
-<td class="cp-export-only cp-export">RUR</td>
-<td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">1 000.00 ₽</td>
-<td class="cp-export-only cp-export">1 000.00</td>
-<td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Выдача наличных, 16.11.2020 00:35:00, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.<div style="display:none;" id="details150618000019579526"><form class="frmDetails">
-<input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019579526" name="TranId" type="hidden"><div class="wrap-details"><table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0"><tbody>
-<tr class="blockBody">
-<td class="tdFieldName">Статус</td>
-<td class="tdFieldVal">Успешно </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Тип операции</td>
-<td class="tdFieldVal">Выдача наличных</td>
-</tr>
-<tr class="blockBody"></tr>
-<tr class="blockBody">
-<td class="tdFieldName">Сумма операции</td>
-<td style="padding-right: 10px !important;" nowrap class="tdFieldVal">1 000.00 ₽<input value="1000" name="Amount" type="hidden">
-</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Проведено</td>
-<td class="tdFieldVal">1 000.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Комиссия</td>
-<td class="tdFieldVal">0.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Дата обработки</td>
-<td class="tdFieldVal">16.11.2020</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Информация о терминале</td>
-<td class="tdFieldVal">ATM, Россия, Ekaterinburg, ul. Chapaeva 3a</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Описание</td>
-<td class="tdFieldVal">Выдача наличных, 16.11.2020 00:35:00, Карта: 437562*4576, Сумма 1000.00 RUB, Россия, Банкомат: 66000002, Екатеринбург, Чапаева 3а, Код авторизации: 720013.</td>
-</tr>
-</tbody></table></div>
-</form></div>
-</td>
-<td class="cp-export cp-export-only"></td>
-<td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-16--3">16.11.2020</td>
-<td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="1000.00">1 000.00 ₽</td>
-<td class="cp-export cp-export-only">1 000.00</td>
-<td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00 ₽</td>
-<td class="cp-export cp-export-only"> 0.00</td>
-<td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
-<td class="cp-export cp-export-only">437562******4576</td>
-<td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;"><div class="row"><div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
-<div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019579526"></div>
-<ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019579526"></ul>
-</div></div></td>
-</tr>
-<tr tranid="150618000019594094" data-transaction-id="150618000019594094" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="2">
-<td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-1600:35:00">
-<div class="cp-time">16.11.2020<br><span style="font-size: 90%;">00:35:00</span>
-</div>
-<div class="cp-icon"></div>
-</td>
-<td class="cp-export-only cp-export">16.11.2020 00:35:00</td>
-<td class="cp-export-only cp-export">Покупка</td>
-<td class="cp-export-only cp-export">RUR</td>
-<td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">99.29 ₽</td>
-<td class="cp-export-only cp-export">99.29</td>
-<td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Оплата товара/услуги, 16.11.2020 00:35:00, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395<div style="display:none;" id="details150618000019594094"><form class="frmDetails">
-<input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000019594094" name="TranId" type="hidden"><div class="wrap-details"><table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0"><tbody>
-<tr class="blockBody">
-<td class="tdFieldName">Статус</td>
-<td class="tdFieldVal">Успешно </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Тип операции</td>
-<td class="tdFieldVal">Оплата товаров/услуг</td>
-</tr>
-<tr class="blockBody"></tr>
-<tr class="blockBody">
-<td class="tdFieldName">Сумма операции</td>
-<td style="padding-right: 10px !important;" nowrap class="tdFieldVal">99.29 ₽<input value="99.29" name="Amount" type="hidden">
-</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Зарезервировано</td>
-<td class="tdFieldVal">99.29 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Проведено</td>
-<td class="tdFieldVal">99.29 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Комиссия</td>
-<td class="tdFieldVal">0.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Код подтверждения</td>
-<td class="tdFieldVal">418395</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Время совершения операции</td>
-<td class="tdFieldVal">16.11.2020 </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Дата обработки</td>
-<td class="tdFieldVal">16.11.2020</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Информация о терминале</td>
-<td class="tdFieldVal">eCommerce, Великобритания, INTERNET, </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Описание</td>
-<td class="tdFieldVal">Оплата товара/услуги, 16.11.2020 00:35:00, Карта: 437562*4576, Сумма 99.29 RUB, Великобритания, Терминал: WWW.ALIEXPRESS.COM, INTERNET , MCC 5964, Код авторизации: 418395</td>
-</tr>
-</tbody></table></div>
-</form></div>
-</td>
-<td class="cp-export cp-export-only"></td>
-<td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-16--2">16.11.2020</td>
-<td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="99.29">99.29 ₽</td>
-<td class="cp-export cp-export-only">99.29</td>
-<td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00 ₽</td>
-<td class="cp-export cp-export-only"> 0.00</td>
-<td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
-<td class="cp-export cp-export-only">437562******4576</td>
-<td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;"><div class="row"><div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
-<div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000019594094"></div>
-<ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000019594094"></ul>
-</div></div></td>
-</tr>
-<tr tranid="150618000016203288" data-transaction-id="150618000016203288" class="cp-item cp-transaction cp-income" data-mcc="0000" data-sort-original-position="1">
-<td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-1600:35:00">
-<div class="cp-time">16.11.2020<br><span style="font-size: 90%;">00:35:00</span>
-</div>
-<div class="cp-icon"></div>
-</td>
-<td class="cp-export-only cp-export">16.11.2020 00:35:00</td>
-<td class="cp-export-only cp-export">Платеж</td>
-<td class="cp-export-only cp-export">RUR</td>
-<td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">200.00 ₽</td>
-<td class="cp-export-only cp-export">200.00</td>
-<td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Перевод просто так, 16.11.2020 00:35:00, Сумма 200.00 RUB, Банк-он-Лайн<div style="display:none;" id="details150618000016203288"><form class="frmDetails">
-<input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150618000016203288" name="TranId" type="hidden"><div class="wrap-details"><table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0"><tbody>
-<tr class="blockBody">
-<td class="tdFieldName">Статус</td>
-<td class="tdFieldVal">Успешно </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Тип операции</td>
-<td class="tdFieldVal">Перевод по заявлению клиента</td>
-</tr>
-<tr class="blockBody"></tr>
-<tr class="blockBody">
-<td class="tdFieldName">Сумма операции</td>
-<td style="padding-right: 10px !important;" nowrap class="tdFieldVal">200.00 ₽<input value="200" name="Amount" type="hidden">
-</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Проведено</td>
-<td class="tdFieldVal">200.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Комиссия</td>
-<td class="tdFieldVal">0.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Дата обработки</td>
-<td class="tdFieldVal">16.11.2020</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Информация о терминале</td>
-<td class="tdFieldVal">Bank-on-line, Россия, Ekaterinburg, ul. Chapaeva 3a</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Описание</td>
-<td class="tdFieldVal">Перевод просто так, 16.11.2020 00:35:00, Сумма 200.00 RUB, Банк-он-Лайн</td>
-</tr>
-</tbody></table></div>
-</form></div>
-</td>
-<td class="cp-export cp-export-only"></td>
-<td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-16--1">16.11.2020</td>
-<td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="200.00">200.00 ₽</td>
-<td class="cp-export cp-export-only">200.00</td>
-<td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00 ₽</td>
-<td class="cp-export cp-export-only"> 0.00</td>
-<td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
-<td class="cp-export cp-export-only"></td>
-<td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;"><div class="row"><div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
-<div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150618000016203288"></div>
-<ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150618000016203288"></ul>
-</div></div></td>
-</tr>
-<tr tranid="150617000016200984" data-transaction-id="150617000016200984" class="cp-item cp-transaction " data-mcc="0000" data-sort-original-position="0">
-<td class="td-action with-hover trans-time text-center cp-no-export" data-action="transaction-show-details" data-sort-value="2020-11-1600:35:00">
-<div class="cp-time">16.11.2020<br><span style="font-size: 90%;">00:35:00</span>
-</div>
-<div class="cp-icon"></div>
-</td>
-<td class="cp-export-only cp-export">16.11.2020 00:35:00</td>
-<td class="cp-export-only cp-export">Платеж</td>
-<td class="cp-export-only cp-export">RUR</td>
-<td ccy="₽" contractccy="₽" class="tranListMoney nowrap td-action with-hover cp-no-export" data-action="transaction-show-details">100.08 ₽</td>
-<td class="cp-export-only cp-export">100.08</td>
-<td class="TranDescription td-action with-hover cp-export" data-action="transaction-show-details">Покупка/продажа иностранной валюты от 16/11/2020. Без НДС, 16.11.2020 00:35:00, Сумма 100.08 RUB, Банк-он-Лайн<div style="display:none;" id="details150617000016200984"><form class="frmDetails">
-<input value="RUR" name="TranCustCcyAc" type="hidden"><input value="150617000016200984" name="TranId" type="hidden"><div class="wrap-details"><table class="tblBlock tabby not-striped tbl-details" cellspacing="0" border="0"><tbody>
-<tr class="blockBody">
-<td class="tdFieldName">Статус</td>
-<td class="tdFieldVal">Успешно </td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Тип операции</td>
-<td class="tdFieldVal">Перевод по заявлению клиента</td>
-</tr>
-<tr class="blockBody"></tr>
-<tr class="blockBody">
-<td class="tdFieldName">Сумма операции</td>
-<td style="padding-right: 10px !important;" nowrap class="tdFieldVal">100.08 ₽<input value="100.08" name="Amount" type="hidden">
-</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Проведено</td>
-<td class="tdFieldVal">100.08 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Комиссия</td>
-<td class="tdFieldVal">0.00 ₽</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Дата обработки</td>
-<td class="tdFieldVal">16.11.2020</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Информация о терминале</td>
-<td class="tdFieldVal">Bank-on-line, Россия, Ekaterinburg, ul. Chapaeva 3a</td>
-</tr>
-<tr class="blockBody">
-<td class="tdFieldName">Описание</td>
-<td class="tdFieldVal">Покупка/продажа иностранной валюты от 16/11/2020. Без НДС, 16.11.2020 00:35:00, Сумма 100.08 RUB, Банк-он-Лайн</td>
-</tr>
-</tbody></table></div>
-</form></div>
-</td>
-<td class="cp-export cp-export-only"></td>
-<td class="td-action with-hover text-center cp-export" data-action="transaction-show-details" data-sort-value="2020-11-16--0">16.11.2020</td>
-<td class="tranListMoney nowrap cp-no-export td-action with-hover" data-action="transaction-show-details" data-sort-value="100.08">100.08 ₽</td>
-<td class="cp-export cp-export-only">100.08</td>
-<td class="tranListMoney tranListFee cp-no-export nowrap td-action with-hover" data-action="transaction-show-details">0.00 ₽</td>
-<td class="cp-export cp-export-only"> 0.00</td>
-<td class="tranListMoney cp-no-export nowrap td-action td-tran-action cp-available-balance"></td>
-<td class="cp-export cp-export-only"></td>
-<td class="cp-context-menu cp-no-export" style="width: 80px;padding: 0;vertical-align: middle;"><div class="row"><div style="padding: 0" class="small-4 column large-centered medium-centered small-centered">
-<div title="Дополнительно" data-options="align:left" class="information" data-dropdown="drop-action-150617000016200984"></div>
-<ul data-dropdown-content="" class="f-dropdown dropdown-list moreaction" id="drop-action-150617000016200984"></ul>
-</div></div></td>
-</tr>
-<tr class="nofltr" style="display:none"><td id="tranReportForms" colspan="8"></td></tr>
-</tbody>
-</table>
-</div>
-<div class="row" id="divContextHelp"></div>
-</td></tr></tbody></table></div></div></div>
-</div>
